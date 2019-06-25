@@ -12,12 +12,22 @@ let illo = new Zdog.Illustration({
 
   });
   
+  // add a Poly
+  let yTri = new Zdog.Polygon({
+    addTo: illo,
+    translate: { y: -60 },
+    scale: 80,
+    stroke: 10,
+    rotate: { x: -Zdog.TAU/8 }
+  });
+
   // add circle
-  new Zdog.Ellipse({
+  let circ = new Zdog.Ellipse({
     addTo: illo,
     diameter: 80,
     stroke: 10,
     color: '#636',
+    backface: '#C25'
   });
   
   // update & render
